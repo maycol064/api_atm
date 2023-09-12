@@ -17,7 +17,6 @@ class ClienteController {
   public async getAll(req: Request, res: Response) {
     try {
       const clients = await Cliente.findAll();
-      console.log(clients)
       return res.json({ clients }).status(200);
     } catch (error) {
       return res.status(400).json({ error });
